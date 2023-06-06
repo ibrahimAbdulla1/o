@@ -1,0 +1,31 @@
+import pandas as pd
+import requests
+
+# Replace this with your actual API endpoint
+api_endpoint = '' # not sure if the endpoint is a the infermedica url
+
+# These are the symptom
+symptom = 'football injuries'
+
+# The data you will send with the request
+data = {
+    'symptom': symptom
+}
+
+# send an API request
+response = requests.post(api_endpoint, data=data)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # the response is in JSON format
+
+    diagnose_data = response.json()
+
+    # Create a DataFrame from the diagnose data
+    df = pd.DataFrame(diagnose_data)
+
+
+    df.to_csv('football_injuries_diagnoses.csv', index=False)
+else:
+    print(f'API request failed with status code {response.status_code}')
+

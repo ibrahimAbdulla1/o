@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare+</title>
+    <style>
+        /* Your styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.pinimg.com/564x/21/6e/73/216e731f800453e35ac3497ea8ba2b32.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            background-color: white;
+            text-align: left;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 1em;
+        }
+
+        nav a {
+            color: #000;
+        }
+
+        main {
+            margin: 2em;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        label,
+        input {
+            display: block;
+            margin-bottom: 1em;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://mail.google.com/mail/u/0?ui=2&ik=78328c52e8&attid=0.1&permmsgid=msg-a:r870401345867455118&th=1880b03aa28342a6&view=att&disp=safe&realattid=f_lhj660pu0" alt="Logo" style="width: 150px;">
+        <h1>Healthcare+</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="/guest">OmarTheChatbot</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Log In</h2>
+        <form method="post" action=".">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <input type="submit" value="Sign up">
+        </form>
+        <p>
+            <a href="/register">Create an Account</a>
+            <br>
+            <a href="/guest">Continue as a guest</a>
+        </p>
+    </main>
+</body>
+</html>

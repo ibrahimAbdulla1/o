@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f6f6f6;
+    }
+    #chatbot {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      height: 400px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+    .chat-output {
+      margin-bottom: 20px;
+    }
+    .user-input, .bot-response {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .user-input {
+      background-color: #ddd;
+    }
+    .bot-response {
+      background-color: #bbb;
+    }
+    #diagnosis {
+      background-color: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+    <title></title>
+</head>
+<body>
+  <h2>Healthcare +</h2>
+  <h3>OmarTheChatbot</h3>
+  <div id="chatbot">
+    <p>Hello, I am Omar the artificial intelligence chatbot. Please may I ask for your symptoms?</p>
+    <div id="chat-output">
+      <!-- Omar the chatbot responding.... -->
+      <div class="bot-response">
+        <pre>{{ chatbot_response | safe }}</pre>
+      </div>
+    </div>
+    <form method="POST" action="{% url 'diagnosis' %}">
+      {% csrf_token %}
+      <label for="age">Enter your age:</label><br>
+      <input type="text" id="age" name="age"><br>
+      <label for="sex">Enter your sex:</label><br>
+      <select id="sex" name="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+      </select><br>
+      <label for="symptoms">Enter your symptoms:</label><br>
+      <textarea id="symptoms" name="symptoms" rows="4" cols="50"></textarea><br>
+      <input type="submit" value="Submit">
+    </form>
+    <!-- Diagnosis results -->
+   <div id="diagnosis">
+  {% if response_data %}
+    <h4>Diagnosis Results:</h4>
+    <pre>{{ response_data | safe }}</pre>
+  {% else %}
+    <p> The last response was: N/A</p>
+  {% endif %}
+    </div>
+    </div>
+</body>
+</html>
+
+

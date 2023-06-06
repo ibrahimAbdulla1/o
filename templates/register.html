@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Healthcare+</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/564x/21/6e/73/216e731f800453e35ac3497ea8ba2b32.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.8);
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #ADD8E6;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            display: block;
+            width: 175px;
+            margin: 0 auto;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <img class="logo" src="https://mail.google.com/mail/u/0?ui=2&ik=78328c52e8&attid=0.1&permmsgid=msg-a:r870401345867455118&th=1880b03aa28342a6&view=att&disp=safe&realattid=f_lhj660pu0" alt="Logo">
+        <div class="heading">
+            <h2>Create an Account</h2>
+        </div>
+        <form method="post" action="http://localhost:63342/djangoProject/register.html?_ijt=crickdic5gusenn9kbt6e338f7&_ij_reload=RELOAD_ON_SAVE">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" name="confirm_password" id="confirm_password" required>
+            <input type="submit" value="Create Account">
+        </form>
+
+
+
+
+
+
